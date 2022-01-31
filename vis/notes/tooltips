@@ -35,4 +35,3 @@ map_panel =  pitching_scatter & states_select_map
 map_panel
 
 I suspect the key here is I have added .transform_filter(state_select) at the end of code for pitching_scatter. If I remove the transform_filter() and only output the pitching_scatter, the tooltip works well for providing the players' first and last names. But .transform_filter() should not be deleted otherwise we will lose the function that filters the data on the pitching_scatter by selecting states on the states_select_map.
-
