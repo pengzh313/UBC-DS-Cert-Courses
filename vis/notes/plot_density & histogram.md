@@ -5,7 +5,6 @@ The below discussion between Peng and the course instructor was for ***Assignmen
 My answer was D density_plot (see the plot as below). The question is focusing on comparing the blockbusters with not top 10% films to find out which group received a higher "voting average" score. From the density plot, the blockbusters' area chart is more towards to right than the distribution of the not top 10% films. Particularly the density plot shows two peaks of the two groups' distribution, and it is visually easier to see the peak of the blockbusters' area chart is on the right side of the not top 10% films'. In my opinion, although the layered histogram plot can also answer the question directly, the density plot is more like a further processed way to have a better visualization specific to the question. 
 <img src="https://user-images.githubusercontent.com/96747423/151845609-eaa492ed-fa93-48ac-92e0-262aea40818f.png" width="600" height="300" />
 <img src="https://user-images.githubusercontent.com/96747423/151845679-2f90c129-5a56-40a3-975a-cd1a0e55d030.png" width="600" height="300" />
-![download2](https://user-images.githubusercontent.com/96747423/151845679-2f90c129-5a56-40a3-975a-cd1a0e55d030.png)
 
 **Answer**: I think ultimately here it comes down to the fact that with a Histogram you are looking directly at counts of your data, whereas in the density plots there has been some smoothing and data prediction calculations that have been done to produce the curves.
 
