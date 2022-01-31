@@ -1,6 +1,6 @@
 The below discussion bewteen Peng and the course instructor was for Assignment 4 Q2.4
 
-**Question**: t has been over halfway for the Data Visualization course. So far I think it is quite straight-forward to write codes and generate simple to moderately complex plots by following the course materials, Altair documentations, and other references. However, sometimes I still felt not very clear when interpreting the visualization. Take assignment 4, Q2.4 as an example:
+**Question**: It has been over halfway for the Data Visualization course. So far I think it is quite straight-forward to write codes and generate simple to moderately complex plots by following the course materials, Altair documentations, and other references. However, sometimes I still felt not very clear when interpreting the visualization. Take assignment 4, Q2.4 as an example:
 
 The question is to find any columns that appear to have a positive relationship with the vote_average column. If we only review the matrix plots from Q2.3, I would say all three columns, 'runtime', 'revenue', and 'vote_count', have shown a slightly positive relationship with the 'vote_average' column. Especially, I cannot tell difference between 'revenue' and 'vote_count' by comparing the two plots visually.
 
