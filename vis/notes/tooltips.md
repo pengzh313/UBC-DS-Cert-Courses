@@ -1,0 +1,38 @@
+The below note was from Peng regarding Assignment #7 Q3.3
+
+The following codes can generate the required plots and test_3_3_a & test_3_3_b have been passed (there is an additional hidden test that I cannot confirm the result). However, the tooltip that supposes to indicate the player's first and last name on pitching_scatter does not work anymore on the final plot, map_panel while the tooltip for birth_state and player_num on states_select_map is still working.
+
+pitcher_url = 'https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/baseball_pitchers.json'
+
+state_select = alt.selection_multi(fields=['id'])
+
+states_select_map = players_map.encode(
+    opacity=alt.condition(state_select, alt.value(0.8), alt.value(0.2)),
+    tooltip=[
+        alt.Tooltip("birth_state:N", title="State Player was Born"),
+        alt.Tooltip("player_num:Q", title="Number of players"),
+    ]).transform_lookup(
+    lookup="id",
+    from_=alt.LookupData(state_url, "id", ["birth_state", "player_num"])
+).add_selection(state_select)
+
+pitching_scatter = alt.Chart(pitcher_url).mark_circle(size=20).encode(
+    alt.X("ERA:Q", 
+          title="ERA (earned run average)",
+          scale=alt.Scale(domain=[0, 55])
+         ),
+    alt.Y("SO_per_BF:Q", 
+          title="Strikeouts per batter faced", 
+          scale=alt.Scale(domain=[0, 0.5])
+         ),
+    tooltip=["name_first:N", "name_last:N"]
+).properties(width=500,
+             title=" There is a negative relationship between ERA and Strikout rates of pitchers"
+            ).transform_filter(state_select)
+
+map_panel =  pitching_scatter & states_select_map
+
+map_panel
+
+I suspect the key here is I have added .transform_filter(state_select) at the end of code for pitching_scatter. If I remove the transform_filter() and only output the pitching_scatter, the tooltip works well for providing the players' first and last names. But .transform_filter() should not be deleted otherwise we will lose the function that filters the data on the pitching_scatter by selecting states on the states_select_map.
+
