@@ -1,6 +1,6 @@
 The below note was from Peng regarding Assignment #7 Q3.3
 
-The following codes can generate the required plots and test_3_3_a & test_3_3_b have been passed (there is an additional hidden test that I cannot confirm the result). However, the tooltip that supposes to indicate the player's first and last name on pitching_scatter does not work anymore on the final plot, map_panel while the tooltip for birth_state and player_num on states_select_map is still working.
+The following codes can generate the required plots. However, the tooltip that supposes to indicate the player's first and last name on pitching_scatter does not work anymore on the final plot, map_panel while the tooltip for birth_state and player_num on states_select_map is still working.
 
 pitcher_url = 'https://raw.githubusercontent.com/UBC-MDS/exploratory-data-viz/main/data/baseball_pitchers.json'
 
